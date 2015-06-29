@@ -1,0 +1,292 @@
+HUSK:
+	Inherits: ^Cyborg
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~cybbar
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Husk
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Husk
+	Health:
+		HP: 200
+	Armor:
+		Type: Plate
+	Mobile:
+		Speed: 50
+	Armament@PRIMARY:
+		Weapon: HuskGun
+		LocalOffset: 300,0,600
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		UpgradeTypes: overseerboost
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	WithMuzzleFlash:
+	Armament@Overseer:
+		Weapon: HuskGunHorde
+		LocalOffset: 256,0,600
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		UpgradeTypes: overseerboost
+		UpgradeMinEnabledLevel: 1
+		
+HHUSK:
+	Inherits: ^Cyborg
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~cybbar
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Cannon Husk
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Husk
+	Health:
+		HP: 200
+	Armor:
+		Type: Plate
+	Mobile:
+		Speed: 50
+	Armament@PRIMARY:
+		Weapon: 30mm
+		LocalOffset: 400,0,1200
+#		MuzzleSequence: gunfire
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+#	WithMuzzleFlash:
+
+KENGINEER:
+	Inherits: ^Cyborg
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Ascentor
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites:  ~cybbar
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Ascentor
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 800
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	-GainsExperience:
+
+CYBSPY:
+	Inherits: ^Cyborg
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~cybbar
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Informer
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Husk
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 60
+	RevealsShroud:
+		Range: 10c0
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	Infiltrates:
+		Types: SpyInfiltrate
+	Cloak:
+		Types: Camoflage	
+	
+JAGUAR:
+	Inherits: ^Cyborg
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~cybbar
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Devourer
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Jaguar
+	Health:
+		HP: 200
+	Armor:
+		Type: Plate
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 6c0
+	Armament@primary:
+		Weapon: JaguarClaw
+	AttackLeap:
+		Speed: 110
+		Angle: 60
+	TargetableUnit:
+		TargetTypes: Ground, Infantry
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Cloak, Camoflage
+		Range: 5
+	RenderDetectionCircle:
+	
+VANGUARD:
+	Inherits: ^Cyborg
+	Armor:
+		Type: Plate
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Vanguard
+		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 50
+		Prerequisites: ~cybbar, ~!t1
+	-Crushable:
+	Selectable:
+		Bounds: 14,30,0,-7
+	Voiced:
+		VoiceSet: Cyborg
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 300
+	Passenger:
+	RevealsShroud:
+		Range: 5c0
+	Armament@primary:
+		Weapon: VulcanShotgun
+		LocalOffset: 300,64,2100
+	Armament@extrabullet1:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100
+	Armament@extrabullet2:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100
+	Armament@extrabullet3:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100		
+	Armament@extrabullet4:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100
+	Armament@extrabullet5:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100
+	Armament@extrabullet6:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100
+	Armament@extrabullet7:
+		Weapon: VulcanShotgun2
+		LocalOffset: 300,64,2100	
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2		
+
+OVERSEER:
+	Inherits: ^Cyborg
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~cybbar
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Overseer
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: CyborgCommando
+	Health:
+		HP: 300
+	Armor:
+		Type: Plate
+	Mobile:
+		Speed: 50
+	Armament@PRIMARY:
+		Weapon: OverGun
+		LocalOffset: 300,0,300
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	DetectCloaked:
+		CloakTypes: Cloak, Camoflage
+		Range: 6
+	RenderDetectionCircle:
+	UpgradeActorsNear:
+		Upgrades: overseerboost
+		Range: 6c0
+		UpgradeMinEnabledLevel: 1
+		
+CYC2:
+	Inherits: ^Cyborg
+	Armor:
+		Type: Heavy
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Cyborg Commando
+		Description: Elite cybernetic infantry unit.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft\nMaximum 1 can be trained.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 50
+		Prerequisites: ~cybbar, ~!t1, ~!t2
+		BuildLimit: 1
+	-Crushable:
+	Selectable:
+		Bounds: 14,30,0,-7
+	Voiced:
+		VoiceSet: CyborgCommando
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 500
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Passenger:
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: CyCannon
+		LocalOffset: 170,85,683
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		

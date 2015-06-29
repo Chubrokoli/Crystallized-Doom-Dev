@@ -1,0 +1,147 @@
+Player:
+	HackyAI@NormalAI:
+		Name: Normal AI
+		BuildingCommonNames:
+			ConstructionYard: gacnst, nacnst, kacnst, facnst
+			Refinery: gproc, nproc, kproc, fproc
+			Power: gapowr, napowr, naapwr, kpr, fapowr
+			Barracks: gapile, nahand, cybbar, fabar
+			VehiclesFactory: gaweap, naweap, kaweap
+			Production: gapile, nahand, cybbar, fabar, gaweap, naweap, kaweap, faweap
+			Silo: gasilo, nasilo, kasilo, fasilo
+		UnitsCommonNames:
+			Mcv: gmcv, nmcv, kmcv, fmcv
+		BuildingLimits:
+			gproc: 4
+			nproc: 4
+			kproc: 4
+			fproc: 4
+			gapowr: 8
+			napowr: 8
+			naapwr: 4
+			kpr: 8
+			fapowr: 8
+			gapile: 2
+			nahand: 2
+			cybbar: 2
+			fabar: 2
+			gaweap: 2
+			naweap: 2
+			kaweap: 2
+			faweap: 2
+			garadr: 1
+			naradr: 1
+			karadr: 1
+			faaray: 1
+			gatech: 1
+			natech: 1
+			nastlh: 1
+			gamg: 12
+			gaspot: 10
+			naspot: 10
+			fatower: 10
+			garpg: 4
+			gasam: 4
+			naobel: 2
+			nalasr: 12
+			nasam: 4
+			kalasr: 8
+		BuildingFractions:
+#Power
+			gapowr: 35%
+			napowr: 30%
+			naapwr: 20%
+			kpr: 20%
+			fapowr: 35%
+			
+#Refinaries
+			gproc: 30%
+			nproc: 30%
+			kproc: 30%
+			fproc: 30%
+			
+#Barracks
+			gapile: 1%
+			nahand: 1%
+			cybbar: 1%
+			fabar: 1%
+			
+#Factories
+			gaweap: 1%
+			naweap: 1%
+			kaweap: 1%
+			faweap: 1%
+			
+#Radar
+			garadr: 1%
+			naradr: 1%
+			faaray: 1%
+			karadr: 1%
+			
+#Tech
+			gatech: 1%
+			natech: 1%
+			
+#Special
+			nastlh: 1%
+
+#Defense Basic
+			gamg: 20%
+			nalasr: 20%
+			kalasr: 30%
+			
+#Defense Spot
+			gaspot: 20%
+			naspot: 20%
+			fatower: 30%
+			
+#Defense AA
+			gasam: 6%
+			nasam: 6%
+			
+#Defense AT
+			garpg: 10%
+			
+#Defense Power
+			naobel: 3%
+			
+		UnitsToBuild:
+#T1
+			gasol: 80%
+			nasol: 80%
+			husk: 80%
+			grunt: 80%
+			e2: 40%
+			e3: 40%
+			hhusk: 40%
+			hunter: 40%			
+			gdog: 10%
+			ndog: 10%
+			jaguar: 10%
+			fdog: 10%
+			gharv: 1%
+			nharv: 1%
+			kharv: 1%
+			fharv: 1%
+#T2
+			medic: 2%
+			smech: 20%
+			gtmtnk: 25%
+			bike: 60%
+			bggy: 75%
+			vanguard: 20%
+			dreadfire: 30%
+			reaper: 40%
+			fbuggy: 40%
+			wapc: 20%
+#T3
+			zmarine: 40%
+			hvr: 30%
+			nacad: 60%
+			shadow: 30%
+			cheetah: 50%
+			overseer: 25%
+			brigand: 40%
+			fltnk: 30%
+#T4
+		SquadSize: 30

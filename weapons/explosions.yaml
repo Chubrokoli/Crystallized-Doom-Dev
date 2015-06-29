@@ -1,0 +1,58 @@
+UnitExplode:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 50
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: large_twlt
+		ExplosionPalette: apolra2
+		ImpactSound: expnew09.aud
+
+UnitExplodeSmall:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 40
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: medium_brnl
+		ExplosionPalette: apolra2
+		ImpactSound: expnew13.aud
+		
+NodMine:
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 400
+		AffectsParent: true
+		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: large_explosion
+		ImpactSound: mineblo1.aud
+
+TiberiumExplosion:
+	Warhead@1Dam: SpreadDamage
+		Spread: 9
+		Damage: 10
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne Small, ExplosionDeath
+	Warhead@2Res: CreateResource
+		AddsResourceType: Tiberium
+		Size: 1,1
+	Warhead@3Eff: CreateEffect
+		Explosion: large_explosion
+		ExplosionPalette: apolra2
+		ImpactSound: expnew09.aud

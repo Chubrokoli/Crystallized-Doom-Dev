@@ -1,0 +1,66 @@
+Player:
+	AlwaysVisible:
+	TechTree:
+	ClassicProductionQueue@Building:
+		Type: Building
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 70, 60, 50, 40, 30, 25
+	ClassicProductionQueue@Defense:
+		Type: Defense
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 70, 60, 50, 40, 30, 25
+	ClassicProductionQueue@Vehicle:
+		Type: Vehicle
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 70, 60, 50, 40, 30, 25
+	ClassicProductionQueue@Infantry:
+		Type: Infantry
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 70, 60, 50, 40, 30, 25
+	ClassicProductionQueue@Air:
+		Type: Air
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 70, 60, 50, 40, 30, 25
+	PlaceBuilding:
+		Palette: ra
+	SupportPowerManager:
+	ScriptTriggers:
+	MissionObjectives:
+	ConquestVictoryConditions:
+	PowerManager:
+	AllyRepair:
+	PlayerResources:
+		SelectableCash: 2500, 5000, 10000, 20000
+		DefaultCash: 20000
+	ActorGroupProxy:
+	DeveloperMode:
+	GpsWatcher:
+	Shroud:
+	FrozenActorLayer:
+	BaseAttackNotifier:
+	HarvesterAttackNotifier:
+	PlayerStatistics:
+	PlaceBeacon:
+	ProvidesTechPrerequisite@T1:
+        Name: Tier 1
+        Prerequisites: t1
+	ProvidesTechPrerequisite@T2:
+        Name: Tier 2
+        Prerequisites: t2
+	ProvidesTechPrerequisite@T3:
+        Name: Tier 3
+        Prerequisites: t3

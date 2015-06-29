@@ -1,0 +1,455 @@
+Minigun:
+	ReloadDelay: 20
+	Range: 5c0
+	Report: RIFLE1G.AUD,RIFLE2G.AUD
+	Projectile: Bullet
+		Image: bullet
+		Angle: 62
+		Palette: effect
+		Speed: 0c512
+		Inaccuracy: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 32
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+
+Minigun2:
+	ReloadDelay: 15
+	Range: 4c0
+	Report:  RIFLE1N.AUD,RIFLE2N.AUD
+	Burst: 2
+	BurstDelay: 4
+	Projectile: Bullet
+		Image: bullet
+		Angle: 62
+		Palette: effect
+		Speed: 0c512
+		Inaccuracy: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 14
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+
+M1Carbine:
+	ReloadDelay: 25
+	Range: 6c0
+	Report: MACHINEGUN2.AUD
+	Projectile: Bullet
+		Image: burstbullet
+		Speed: 0c512
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5	
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+HuskGun:
+	ReloadDelay: 25
+	Range: 5c0
+	Report: MACHINEGUN5.AUD
+	Projectile: Bullet
+		Image: bullet
+		Angle: 62
+		Palette: effect
+		Speed: 0c512
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5	
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+HuskGunHorde:
+	ReloadDelay: 30
+	Range: 5c0
+	Report: MACHINEGUN5.AUD
+	Burst: 2
+	Projectile: Bullet
+		Image: bullet
+		Angle: 62
+		Palette: effect
+		Speed: 0c512
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5	
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+SMG:
+	ReloadDelay: 80
+	Range: 4c0
+	Report: SMG1.AUD,SMG2.AUD
+	Burst: 10
+	BurstDelay: 4
+	Projectile: Bullet
+		Image: bullet
+		Angle: 62
+		Palette: effect
+		Speed: 0c512
+		Inaccuracy: 1c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 4
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5	
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+
+Vulcan:
+	ReloadDelay: 45
+	Range: 5c0
+	Report: MG6.AUD #STORMGUN1.AUD,STORMGUN2.AUD,STORMGUN3.AUD
+	Burst: 2
+	Projectile: Bullet
+		Image: bullet	
+		Speed: 0c682
+		Inaccuracy: 0c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+		Versus:
+			Kevlar: 100
+			Plate: 80
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+
+M203:
+	ReloadDelay: 120
+	Range: 6c768
+	Report: M203.AUD,GP25.AUD
+	Projectile: Bullet
+		Speed: 0c256
+		Image: 120mm
+		Angle: 62
+		Palette: ra
+		Inaccuracy: 1c0
+		ContrailLength: 10
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 50
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 80
+			Medium: 30
+			Heavy: 20
+			Wood: 60
+			Steel: 40
+			Concrete: 20	
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: tiny_clsn
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+		
+30mm:
+	ReloadDelay: 50
+	Range: 6c768
+	Report: SMAW.AUD
+	Projectile: Bullet
+		Speed: 0c512
+		Image: 120mm
+		Shadow: true
+		Angle: 62
+		Palette: ra
+		Inaccuracy: 1c0
+		ContrailLength: 10
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 80
+		Versus:
+			Kevlar: 90
+			Plate: 90
+			Light: 100
+			Medium: 80
+			Heavy: 50
+			Wood: 80
+			Steel: 50
+			Concrete: 20
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: tiny_clsn
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	
+OverGun:
+	ReloadDelay: 120
+	Burst: 30
+	BurstDelay: 5
+	Range: 5c0
+	Report: FG42_01.AUD, FG42_02.AUD, FG42_03.AUD
+	Projectile: Bullet
+		Image: bullet
+		Speed: 0c512
+		Inaccuracy: 0c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+		Versus:
+			Kevlar: 100
+			Plate: 60
+			Light: 35
+			Medium: 25
+			Heavy: 15
+			Wood: 40
+			Steel: 10
+			Concrete: 5	
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+WatchSniper:
+	ReloadDelay: 100
+	Range: 7c0
+	Report: SNIPER1.AUD, SNIPER2.AUD, SNIPER3.AUD
+	Projectile: LaserZap
+		Color: 255,255,255,255
+		BeamWidth: 1
+		Inaccuracy: 0c128
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 100
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 40
+			Medium: 30
+			Heavy: 20
+			Wood: 40
+			Steel: 20
+			Concrete: 10		
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+VulcanShotgun:
+	ReloadDelay: 100
+	Burst: 10
+#	BurstDelay: 0
+	Range: 4c0
+	Report: SHOTGUN1.AUD, SHOTGUN2.AUD,SHOTGUN4.AUD
+	Projectile: Bullet
+		Image: bullet
+		Speed: 0c512
+		Inaccuracy: 1c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 15
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 40
+			Medium: 30
+			Heavy: 20
+			Wood: 40
+			Steel: 20
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water	
+		
+VulcanShotgun2:
+	ReloadDelay: 100
+	Burst: 10
+	Range: 4c0
+	Projectile: Bullet
+		Image: bullet
+		Speed: 0c512
+		Inaccuracy: 1c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 15
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 40
+			Medium: 30
+			Heavy: 20
+			Wood: 40
+			Steel: 20
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+BrigandShotgun:
+	ReloadDelay: 50
+	Range: 4c0
+	Report: SHOTGUN3.AUD
+	Projectile: Bullet
+		Image: bullet
+		Speed: 0c512
+		Inaccuracy: 1c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 30
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 40
+			Medium: 30
+			Heavy: 20
+			Wood: 40
+			Steel: 20
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+		
+BrigandShotgun2:
+	ReloadDelay: 50
+	Range: 4c0
+	Projectile: Bullet
+		Image: bullet
+		Speed: 0c512
+		Inaccuracy: 1c256
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 30
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 40
+			Medium: 30
+			Heavy: 20
+			Wood: 40
+			Steel: 20
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piff
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water		

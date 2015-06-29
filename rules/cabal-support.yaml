@@ -1,0 +1,64 @@
+KAWALL:
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 20
+		Prerequisites: ~structures.cabal
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+	Health:
+		HP: 300
+	Armor:
+		Type: Concrete
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+		
+KALASR:
+	Inherits: ^Building
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Sesno Tower
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: cybbar, ~structures.cabal, ~!t1
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 74, 0, -14
+	RequiresPower:
+	DisabledOverlay:
+	-GivesBuildableArea:
+	Health:
+		HP: 500
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: LaserFire3
+		LocalOffset: 1000,0,1250
+	AttackOmni:
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Range: 5
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -100

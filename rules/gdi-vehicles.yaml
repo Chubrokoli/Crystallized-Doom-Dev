@@ -1,0 +1,435 @@
+GMCV:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 110
+		Prerequisites: ~gaweap
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: GDI Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Selectable:
+		Priority: 3
+		Bounds: 42,42
+	Voiced:
+		VoiceSet: Gmcv
+	Health:
+		HP: 600
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		Crushes: wall, crate, infantry
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Transforms:
+		IntoActor: gacnst
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: facbld1.aud
+		NoTransformSounds:
+		Voice: Move
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+
+GHARV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: GDI Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~gaweap, gproc
+		InitialActivity: FindResources
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Gharv
+	Harvester:
+		Capacity: 60
+		Resources: Tiberium, BlueTiberium
+		UnloadTicksPerBale: 1
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+		HarvestVoice: Action
+		DeliverVoice: Move
+	Mobile:
+		Speed: 50
+		Crushes: wall, crate
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Tiberium: 80
+			BlueTiberium: 80
+	Health:
+		HP: 2000
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	-GainsExperience:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelUnloadBody:
+	Explodes:
+		Weapon: TiberiumExplosion
+	WithHarvestAnimation:
+		Offset: 384,0,0
+		Palette: effect	
+		
+APC:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Amphibious APC
+		Description: Armored infantry transport.\nCan move on water.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~gaweap, gapile, ~!t1
+	Mobile:
+		ROT: 5
+		Speed: 113
+		TerrainSpeeds:
+			Water: 80
+	Health:
+		HP: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		ROT: 10
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelWaterBody:
+	LeavesTrails@water:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+	
+HVR:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Hover MLRS
+		Description: Hovering vehicle armed with\nlong range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~gaweap, garadr, ~!t1, ~!t2
+	Voiced:
+		VoiceSet: Archon
+	Mobile:
+		Speed: 80
+		ROT: 6
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+	Health:
+		HP: 230
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: HoverMissile
+		LocalOffset: 0,171,384, 0,-171,384
+	Turreted:
+		ROT: 6
+		Offset: -256,0,85
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		NormalsPalette: RA2normals
+	WithVoxelBody:
+	WithVoxelTurret:
+	Hovers:
+	LeavesTrails@water:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+
+SMECH:
+	Inherits: ^Tank
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Wolverine MK.II
+		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 42,42, 0, -10
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~gaweap, ~!t1
+	Voiced:
+		VoiceSet: Wolverine
+	Mobile:
+		ROT: 5
+		Speed: 60
+	Health:
+		HP: 350
+	Armor:
+		Type: Medium
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: AssaultCannon
+		LocalOffset: 600,200,1500
+	Armament@secondary:
+		Weapon: AssaultCannon
+		LocalOffset: 600,-200,1500
+	RenderSprites:
+	WithInfantryBody:
+	
+GTMTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Archon Tank
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~gaweap, ~!t1
+	Voiced:
+		VoiceSet: Archon
+	Mobile:
+		Speed: 70
+		ROT: 5
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 400
+	Armor:
+		Type: Medium
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 90mm
+		LocalOffset: 800,0,800
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra2
+		Recoil: 200
+		RecoilRecovery: 10
+	Armament@secondary:
+		Weapon: TankMG
+		LocalOffset: 500,0,800
+		MuzzlePalette: apolra2
+		Recoil: 0
+		RecoilRecovery: 0
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		NormalsPalette: RA2normals
+#		LightAmbientColor: 0.4, 0.4, 0.4
+#		LightDiffuseColor: 0.3, 0.3, 0.3
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: no
+	WithVoxelBarrel:
+	WithMuzzleFlash:
+	
+4TNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Mammoth Tank
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~gaweap, ~!t1, ~!t2, ~!t3
+	Mobile:
+		Speed: 56
+		ROT: 5
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 120mmx
+		LocalOffset: 640,85,384, 640,-85,384
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Weapon: MammothTusk
+		LocalOffset: 0,256,426, 0,-256,426
+	AttackTurreted:
+	AutoTarget:
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:
+	WithVoxelBarrel:
+	WithMuzzleFlash:
+	
+MMCH:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Titan MK.II
+		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~gaweap, ~!t1,~!t2, ~!t3
+	Mobile:
+		ROT: 5
+		Speed: 56
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderSprites:
+	WithInfantryBody:
+	Turreted:
+		ROT: 5
+	AttackTurreted:
+	WithTurret:
+		Recoils: no
+	Armament:
+		Weapon: 128mmAPHE
+		LocalOffset: 500, 220, 500
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra2
+	AutoTarget:
+	AttackMove:
+	Selectable:
+		Bounds: 30, 42, 0, -8
+	WithMuzzleFlash:
+	
+HMEC:
+	Inherits: ^Tank
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Mammoth Mk. II
+		Description: Slow heavy walker.\nArmed with dual railguns and rocket launchers.\n  Strong vs Infantry, Vehicles, Aircraft and Buildings\n  Weak vs Nothing\nMaximum 1 can be built.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 80
+		Prerequisites: ~gaweap, gatech, ~!t1,~!t2, ~!t3
+		BuildLimit: 1
+	Mobile:
+		ROT: 3
+		Speed: 42
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 800
+	SelfHealing:
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	RenderSprites:
+	AttackFrontal:
+	AutoTarget:
+	Armament@MISSILES:
+		Weapon: MammothTusk
+		LocalOffset: -400,-384,1700, -400,384,1700
+	Armament@MISSILESAA:
+		Weapon: MammothTuskAA
+		LocalOffset: -400,-384,1700, -400,384,1700
+	Armament@RAILGUN1:
+		Weapon: MechRailgun
+		LocalOffset: 440,-350,1100, 440,350,1100
+	Armament@RAILGUN2:
+		Weapon: MechRailgun2
+		LocalOffset: 440,-350,950, 440,350,950
+	Armament@MG:
+		Weapon: MammothMG
+		LocalOffset: 900,0,500
+	Armament@MG2:
+		Weapon: MammothMG
+		LocalOffset: 900,0,500
+	RenderVoxels:
+		NormalsPalette: RA2normals
+		Scale: 1
+	WithVoxelWalkerBody:
+		TickRate: 1
+
+SONIC:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Disruptor
+		Description: Armored high-tech vehicle with\nlong range and sonic armament.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 70
+		Prerequisites: ~gaweap, gatech, ~!t1,~!t2, ~!t3
+	Mobile:
+		ROT: 4
+		Speed: 56
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: SonicZap
+		LocalOffset: -50,0,410
+	AttackTurreted:
+	Turreted:
+		ROT: 5
+		Offset: -170,0,0
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	WithVoxelTurret:

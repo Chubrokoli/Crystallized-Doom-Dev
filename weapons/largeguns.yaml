@@ -1,0 +1,290 @@
+GremlinShotgun:
+	ReloadDelay: 100
+	Burst: 10
+#	BurstDelay: 0
+	Range: 4c0
+	Report: 20MM_BURST1.WAV, 20MM_BURST2.WAV, 20MM_BURST3.WAV, 20MM_BURST4.WAV, 20MM_BURST5.WAV #SHOTGUN1.AUD,SHOTGUN2.AUD
+	Projectile: Bullet
+		Image: bullet
+		Speed: 0c512
+		Inaccuracy: 1c256
+		ContrailLength: 10
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 20
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 40
+			Medium: 30
+			Heavy: 20
+			Wood: 40
+			Steel: 20
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: tiny_clsn #piff
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water	
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@5Eff: CreateEffect
+		Explosion: flash
+		ExplosionPalette: alpha
+
+MammothMG:
+	ReloadDelay: 200
+	Range: 8c0
+	Report: STORMGUN1.AUD,STORMGUN2.AUD,STORMGUN3.AUD
+	Burst: 40
+	Projectile: Bullet
+		Image: bullet	
+		Speed: 0c682
+		Inaccuracy: 1c512
+		ContrailLength: 10
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 25
+		Versus:
+			Kevlar: 100
+			Plate: 80
+			Light: 50
+			Medium: 35
+			Heavy: 25
+			Wood: 60
+			Steel: 25
+			Concrete: 10	
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: water_piffs
+		ValidImpactTypes: Water
+
+90mm:
+	ReloadDelay: 50
+	Range: 6c768
+	Report: 90MM_m1.WAV, 90MM_m3.WAV #SHOT01.AUD, SHOT02.AUD, SHOT03.AUD #120MMF.AUD
+	Projectile: Bullet
+		Speed: 1c0
+		Inaccuracy: 0c128
+		Image: 120mm
+		Shadow: true
+		Angle: 62
+		Palette: ra
+		ContrailLength: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 100
+		Versus:
+			Kevlar: 100
+			Plate: 100
+			Light: 100
+			Medium: 90
+			Heavy: 80
+			Wood: 50
+			Steel: 50
+			Concrete: 50
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: small_clsn
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+	Warhead@5Eff: CreateEffect
+		Explosion: flash
+		ExplosionPalette: alpha
+		
+105mmHE:
+	ReloadDelay: 200
+	Range: 6c768
+	Report: 105mm_m2a1.WAV
+	Projectile: Bullet
+		Speed: 0c512
+		Inaccuracy: 1c0
+		Image: 120mm
+		Shadow: true
+		Angle: 62
+		Palette: ra
+		ContrailLength: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 300
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 80
+			Medium: 40
+			Heavy: 20
+			Wood: 100
+			Steel: 75
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: large_brnl
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@5Eff: CreateEffect
+		Explosion: flash
+		ExplosionPalette: alpha
+
+122mmAP:
+	ReloadDelay: 130
+	Range: 6c768
+	Report: 122MM_D25.WAV
+	Projectile: Bullet
+		Speed: 1c512
+		Inaccuracy: 0c128
+		Image: 120mm
+		Shadow: true
+		Angle: 62
+		Palette: ra
+		ContrailLength: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 125
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: medium_clsn
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+	Warhead@5Eff: CreateEffect
+		Explosion: flash
+		ExplosionPalette: alpha
+
+128mmAPHE:
+	ReloadDelay: 130
+	Range: 6c768
+	Report: 128MM_PAK44.WAV
+	Projectile: Bullet
+		Speed: 1c768
+		Inaccuracy: 0c128
+		Image: 120mm
+		Shadow: true
+		Angle: 62
+		Palette: ra
+		ContrailLength: 40
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 200
+		Versus:
+			None: 100
+			Wood: 100
+			Light: 90
+			Heavy: 75
+			Concrete: 65
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: large_clsn
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: LargeCrater
+	Warhead@5Eff: CreateEffect
+		Explosion: flash
+		ExplosionPalette: alpha
+		
+120mmx:
+	ReloadDelay: 80
+	Range: 6c768
+	Report: 120MMF.AUD
+	Burst: 2
+	BurstDelay: 5
+	Projectile: Bullet
+		Speed: 682
+		Image: 120mm
+		Shadow: true
+		Angle: 62
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: medium_clsn
+		ExplosionPalette: apolra2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
+155mm:
+	ReloadDelay: 110
+	Range: 18c0
+	Report: 120MMF.AUD
+	Projectile: Bullet
+		Speed: 170
+		Image: 120mm
+		Angle: 165
+		Shadow: true
+		Blockable: false
+		Palette: ra
+	MinRange: 5c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 298
+		Damage: 150
+		Versus:
+			None: 100
+			Wood: 85
+			Light: 68
+			Heavy: 35
+			Concrete: 35
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: large_explosion
+		ExplosionPalette: apolra2
+		ImpactSound: expnew06.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash2.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+

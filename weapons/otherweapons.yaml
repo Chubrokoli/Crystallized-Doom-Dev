@@ -1,0 +1,189 @@
+FireballLauncher:
+	ReloadDelay: 50
+	Range: 4c256
+	Report: FLAMTNK1.AUD
+	Projectile: Bullet
+		Speed: 64
+		Image: flametrailer
+		Trail: flametrailer
+		Inaccuracy: 2c384
+	#Burst: 1
+	#BurstDelay: 5
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c341
+		Damage: 25
+		Versus:
+			Kevlar: 100
+			Plate: 80
+			Light: 75
+			Medium: 50
+			Heavy: 25
+			Wood: 100
+			Steel: 25
+			Concrete: 2
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: LargeScorch
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: MediumScorch
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+
+DogJaw:
+	ValidTargets: Infantry
+	ReloadDelay: 500
+	Range: 3c0
+	Report: DOG_A1.AUD, DOG_M1.AUD, DOG_S1.AUD
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 100
+		ValidTargets: Infantry, Mutant
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		ValidStances: Neutral, Enemy
+		Versus:
+			Kevlar: 100
+			Plate: 0
+			Light: 0
+			Medium: 0
+			Heavy: 0
+			Wood: 0
+			Steel: 0
+			Concrete: 0
+			
+MutantDogJaw:
+	ValidTargets: Infantry
+	ReloadDelay: 500
+	Range: 4c0
+	Report: MDOG_A1.AUD, MDOG_M1.AUD, MDOG_S1.AUD
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 100
+		ValidTargets: Infantry, Mutant
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		ValidStances: Neutral, Enemy
+		Versus:
+			Kevlar: 80
+			Plate: 0
+			Light: 0
+			Medium: 0
+			Heavy: 0
+			Wood: 0
+			Steel: 0
+			Concrete: 0			
+			
+JaguarClaw:
+	ValidTargets: Infantry
+	ReloadDelay: 500
+	Range: 3c0
+	Report: JAGUAR_A1.AUD, JAGUAR_S1.AUD, JAGUAR_S2.AUD
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c64
+		Damage: 100
+		ValidTargets: Infantry, Mutant
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+		ValidStances: Neutral, Enemy
+		Versus:
+			Kevlar: 100
+			Plate: 0
+			Light: 0
+			Medium: 0
+			Heavy: 0
+			Wood: 0
+			Steel: 0
+			Concrete: 0		
+
+Kamikaze:
+	ReloadDelay: 1
+	Range: 2c0
+#	MinRange:
+#	Projectile: Bullet
+#		Speed: 1c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 500
+		Versus:
+			Kevlar: 100
+			Plate: 90
+			Light: 80
+			Medium: 50
+			Heavy: 25
+			Wood: 80
+			Steel: 50
+			Concrete: 25	
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosion: large_twlt
+		ExplosionPalette: apolra2
+		ImpactSound: expnew09.aud
+    Warhead@kill: GrantUpgrade
+		Range: 3c512
+		Upgrades: kill
+
+WebLauncher:
+    ReloadDelay: 100
+    Range: 10c0
+    Report: FIREWEB1.AUD
+    Projectile: Bullet
+        Speed: 0c256
+        High: yes
+        Shadow: false
+        Angle: 90
+        Image: web
+# Dummy warhead to allow targeting
+    Warhead@target: SpreadDamage
+        Spread: 0
+        Damage: 0
+		ValidTargets: Infantry, Mutant
+		DamageTypes: TriggerProne
+		ImpactSound: fireweb1.aud
+    Warhead@emp: GrantUpgrade
+        Range: 3c0
+        Duration: 250
+        Upgrades: webdisable
+        ValidTargets: Infantry, Mutant
+		
+FiendShard:
+	ReloadDelay: 30
+	Burst: 3
+	Range: 5c0
+	Report: FIEND2.AUD
+	Projectile: Bullet
+		Speed: 213
+		Image: CRYSTAL4
+		Inaccuracy: 512
+		Shadow: true
+		Angle: 60
+		Palette: greentiberium
+	Warhead@1Dam: SpreadDamage
+		Damage: 35
+		Versus:
+			Light: 60
+			Heavy: 40
+			Concrete: 20
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+
+SlimeAttack:
+	ReloadDelay: 80
+	Range: 5c0
+	Report: VICER1.AUD
+	Projectile: Bullet
+		Speed: 426
+	Warhead@1Dam: SpreadDamage
+		Damage: 100
+		Versus:
+			Light: 60
+			Heavy: 40
+			Concrete: 20
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+
+Tiberium:
+	ReloadDelay: 16
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 2
+		DamageTypes: EnergyDeath # TODO: FIX ME!
+

@@ -1,0 +1,309 @@
+GASOL:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~gapile
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Marine
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Marine		
+	Health:
+		HP: 130
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 70
+	Armament@PRIMARY:
+		Weapon: Minigun
+		LocalOffset: 256,0,1200
+		UpgradeTypes: eliteweapon
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	Armament@ELITE:
+		Weapon: M1Carbine
+		LocalOffset: 256,0,1200
+		UpgradeTypes: eliteweapon
+		UpgradeMinEnabledLevel: 1
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	
+E2:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~gapile
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Disc Thrower
+		Description: Infantry armed with special explosive discs.\n  Strong vs Buildings, Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Discthrower
+	Health:
+		HP: 150
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 56
+	Armament:
+		Weapon: Grenade
+		LocalOffset: 0,0,555
+		FireDelay: 5
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+
+SCOUT:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~gapile
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Scout
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Scout
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 10c0
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	Infiltrates:
+		Types: SpyInfiltrate
+	Cloak:
+		Types: Camoflage
+
+GDOG:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~gapile
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Watch Dog
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Dog
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 6c0
+	Armament@primary:
+		Weapon: DogJaw
+	AttackLeap:
+		Speed: 120
+		Angle: 60
+	TargetableUnit:
+		TargetTypes: Ground, Infantry
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Range: 5
+
+ENGINEER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites:  ~gapile
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Engineer
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 150
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-GainsExperience:
+		
+MEDIC:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Medic
+		Description: Heals nearby infantry.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 60
+		Prerequisites: ~gapile, ~!t1
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Medic
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 125
+	Crushable:
+		CrushSound: squishy2.aud
+	Armament:
+		Weapon: Heal
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		AttackSequence: heal
+	SelfHealing:
+	Passenger:
+		PipType: Red
+
+ZMARINE:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~gapile
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Zone Marine
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Marine		
+	Health:
+		HP: 230
+	Armor:
+		Type: Plate
+	Mobile:
+		Speed: 60
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+		LocalOffset: 256,0,600
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-PoisonedByTiberium:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		
+JUMPJET:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Jumpjet Infantry
+		Description: Airborne soldier.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 50
+		Prerequisites: ~gapile, garadr, ~!t1, ~!t2
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: JumpJet
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 120
+	Armor:
+		Type: Kevlar
+	Passenger:
+		PipType: Green
+	RevealsShroud:
+		Range: 6c0
+	Armament:
+		Weapon: JumpCannon
+	Crushable:
+	AttackFrontal:
+#	WithInfantryBody:
+#		StandSequence: fly
+#		MoveSequence: fly
+#		AttackSequence: shoot-air
+#		IdleSequences: idle-air
+#	Helicopter:
+#		CruiseAltitude: 2560
+#		LandWhenIdle: false
+#		InitialFacing: 20
+#		ROT: 10
+#		Speed: 100
+#	Hovers:
+#		OffsetModifier: -80

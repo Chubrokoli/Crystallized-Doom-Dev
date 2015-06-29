@@ -1,0 +1,292 @@
+Metadata:
+	Title: Crystallized Doom
+	Description: Crystallized Doom developer test build
+	Version: 0.3 Alpha
+	Author: Wardust Development
+
+Folders:
+	.
+# Tiberian Sun
+	./mods/cd
+	./mods/cd/bits
+	./mods/cd/bits/gdi
+	./mods/cd/bits/gdi/buildings
+	./mods/cd/bits/gdi/infantry
+	./mods/cd/bits/gdi/vehicles
+	./mods/cd/bits/nod
+	./mods/cd/bits/nod/buildings
+	./mods/cd/bits/nod/infantry
+	./mods/cd/bits/nod/vehicles
+	./mods/cd/bits/cabal
+	./mods/cd/bits/cabal/buildings
+	./mods/cd/bits/cabal/infantry
+	./mods/cd/bits/cabal/vehicles
+	./mods/cd/bits/forgotten
+	./mods/cd/bits/forgotten/buildings
+	./mods/cd/bits/forgotten/infantry
+	./mods/cd/bits/forgotten/vehicles
+	./mods/cd/bits/tech
+	./mods/cd/bits/anims
+	./mods/cd/bits/anims/explos
+	./mods/cd/bits/anims/trails
+	./mods/cd/bits/anims/weapons
+	./mods/cd/bits/audio
+	./mods/cd/bits/audio/voice
+	./mods/cd/bits/audio/eva
+	./mods/cd/bits/cameo
+	./mods/cd/bits/terrain
+	./mods/cd/bits/misc
+	./mods/cd/uibits
+	~^Content/ts
+# Red Alert
+	./mods/ra/uibits
+
+MapFolders:
+	./mods/cd/maps: System
+	~^maps/ts: User
+
+Packages:
+# Tiberian Sun
+	~scores.mix:CRC32
+	~sidenc01.mix:CRC32
+	~sidenc02.mix:CRC32
+	~gmenu.mix:CRC32
+	~e01scd01.mix:CRC32
+	~e01scd02.mix:CRC32
+	~maps01.mix:CRC32
+	~maps02.mix:CRC32
+	~movies01.mix:CRC32
+	~movies02.mix:CRC32
+	~multi.mix:CRC32
+	~patch.mix:CRC32
+	~sidecd01.mix:CRC32
+	~sidecd02.mix:CRC32
+	~tibsun.mix:CRC32
+	cache.mix:CRC32
+	conquer.mix:CRC32
+	isosnow.mix:CRC32
+	isotemp.mix:CRC32
+	local.mix:CRC32
+	sidec01.mix:CRC32
+	sidec02.mix:CRC32
+	sno.mix:CRC32
+	snow.mix:CRC32
+	sounds.mix:CRC32
+# TODO: differentiate between:
+	speech01.mix:CRC32 # EVA
+#	speech02.mix:CRC32 # Cabal
+	tem.mix:CRC32
+	temperat.mix:CRC32
+# Firestorm
+	~scores01.mix:CRC32
+	~expand01.mix:CRC32
+	~sounds01.mix:CRC32
+	~e01sc01.mix:CRC32
+	~e01sc02.mix:CRC32
+	~e01vox01.mix:CRC32
+	~e01vox02.mix:CRC32
+	~ecache01.mix:CRC32
+
+Rules:
+	./mods/cd/rules/ai.yaml
+	./mods/cd/rules/misc.yaml
+	./mods/cd/rules/player.yaml
+	./mods/cd/rules/world.yaml
+	./mods/cd/rules/palettes.yaml
+	./mods/cd/rules/defaults.yaml
+	./mods/cd/rules/aircraft.yaml
+	./mods/cd/rules/civilian-infantry.yaml
+	./mods/cd/rules/civilian-structures.yaml
+	./mods/cd/rules/civilian-vehicles.yaml
+	./mods/cd/rules/gdi-infantry.yaml
+	./mods/cd/rules/gdi-structures.yaml
+	./mods/cd/rules/gdi-support.yaml
+	./mods/cd/rules/gdi-vehicles.yaml
+	./mods/cd/rules/nod-infantry.yaml
+	./mods/cd/rules/nod-structures.yaml
+	./mods/cd/rules/nod-support.yaml
+	./mods/cd/rules/nod-vehicles.yaml
+	./mods/cd/rules/cabal-vehicles.yaml
+	./mods/cd/rules/cabal-structures.yaml
+	./mods/cd/rules/cabal-support.yaml
+	./mods/cd/rules/cabal-infantry.yaml
+	./mods/cd/rules/forgotten-structures.yaml
+	./mods/cd/rules/forgotten-vehicles.yaml
+	./mods/cd/rules/forgotten-support.yaml
+	./mods/cd/rules/forgotten-infantry.yaml
+	./mods/cd/rules/shared-infantry.yaml
+	./mods/cd/rules/shared-structures.yaml
+	./mods/cd/rules/shared-support.yaml
+	./mods/cd/rules/shared-vehicles.yaml
+	./mods/cd/rules/trees.yaml
+
+Weapons:
+	./mods/cd/weapons/bombsandgrenades.yaml
+	./mods/cd/weapons/energyweapons.yaml
+	./mods/cd/weapons/explosions.yaml
+	./mods/cd/weapons/healweapons.yaml
+	./mods/cd/weapons/largeguns.yaml
+	./mods/cd/weapons/missiles.yaml
+	./mods/cd/weapons/otherweapons.yaml
+	./mods/cd/weapons/smallguns.yaml
+	./mods/cd/weapons/superweapons.yaml
+	./mods/cd/weapons/sidearm.yaml
+
+Sequences:
+	./mods/cd/sequences/aircraft.yaml
+	./mods/cd/sequences/infantry.yaml
+	./mods/cd/sequences/misc.yaml
+	./mods/cd/sequences/civilian.yaml
+	./mods/cd/sequences/structures.yaml
+	./mods/cd/sequences/vehicles.yaml
+	./mods/cd/sequences/trees.yaml
+
+VoxelSequences:
+	./mods/cd/sequences/voxels.yaml
+
+TileSets:
+	./mods/cd/tilesets/temperate.yaml
+	./mods/cd/tilesets/snow.yaml
+
+TileSize: 48,24
+TileShape: Diamond
+SubCells:
+	Offsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	DefaultIndex: 2
+
+Cursors:
+	./mods/cd/cursors.yaml
+
+Chrome:
+	./mods/cd/chrome.yaml
+
+Assemblies:
+	./mods/common/OpenRA.Mods.Common.dll
+	./mods/ra/OpenRA.Mods.RA.dll
+	./mods/cnc/OpenRA.Mods.Cnc.dll
+	./mods/cd/OpenRA.Mods.TS.dll
+
+ChromeLayout:
+	./mods/cd/chrome/install.yaml
+	./mods/ra/chrome/ingame.yaml
+	./mods/ra/chrome/ingame-chat.yaml
+	./mods/ra/chrome/ingame-diplomacy.yaml
+	./mods/ra/chrome/ingame-fmvplayer.yaml
+	./mods/ra/chrome/ingame-menu.yaml
+	./mods/ra/chrome/ingame-info.yaml
+	./mods/ra/chrome/ingame-infoscripterror.yaml
+	./mods/ra/chrome/ingame-infobriefing.yaml
+	./mods/ra/chrome/ingame-infoobjectives.yaml
+	./mods/ra/chrome/ingame-infostats.yaml
+	./mods/d2k/chrome/ingame-observer.yaml
+	./mods/ra/chrome/ingame-observerstats.yaml
+	./mods/cd/chrome/ingame-player.yaml
+	./mods/ra/chrome/ingame-perf.yaml
+	./mods/ra/chrome/ingame-debug.yaml
+	./mods/ra/chrome/ingame-leavemap.yaml
+	./mods/ra/chrome/mainmenu.yaml
+	./mods/ra/chrome/settings.yaml
+	./mods/ra/chrome/credits.yaml
+	./mods/ra/chrome/lobby.yaml
+	./mods/ra/chrome/lobby-mappreview.yaml
+	./mods/ra/chrome/lobby-playerbin.yaml
+	./mods/ra/chrome/lobby-dialogs.yaml
+	./mods/cd/chrome/color-picker.yaml
+	./mods/ra/chrome/map-chooser.yaml
+	./mods/ra/chrome/create-server.yaml
+	./mods/ra/chrome/serverbrowser.yaml
+	./mods/ra/chrome/connection.yaml
+	./mods/ra/chrome/directconnect.yaml
+	./mods/ra/chrome/replaybrowser.yaml
+	./mods/cd/chrome/dropdowns.yaml
+	./mods/ra/chrome/musicplayer.yaml
+	./mods/ra/chrome/tooltips.yaml
+	./mods/ra/chrome/assetbrowser.yaml
+	./mods/ra/chrome/missionbrowser.yaml
+	./mods/ra/chrome/confirmation-dialogs.yaml
+	./mods/ra/chrome/editor.yaml
+	
+Voices:
+	./mods/cd/audio/voices.yaml
+
+Notifications:
+	./mods/cd/audio/speech-generic.yaml
+	./mods/cd/audio/speech-singleplayer.yaml
+	./mods/cd/audio/sounds-generic.yaml
+
+Music:
+	./mods/cd/audio/music.yaml
+
+Translations:
+	./mods/cd/languages/english.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: ./mods/cd/uibits/loadscreen.png
+	Text: Bugging Graion..., Installing new firewalls..., Contacting Black Hand..., Reinforcing CABAL..., Detecting Forgotten..., Listening the crazy ideas from Crimson, Gathering Tiberium...
+
+ContentInstaller:
+	MenuWidget: INSTALL_PANEL
+	MusicMenuWidget: INSTALL_MUSIC_PANEL
+	TestFiles: cache.mix, conquer.mix, isosnow.mix, isotemp.mix, local.mix, sidec01.mix, sidec02.mix, sno.mix, snow.mix, sounds.mix, speech01.mix, tem.mix, temperat.mix
+	PackageMirrorList: http://www.openra.net/packages/ts-mirrors.txt
+	DiskTestFiles: MULTI.MIX, INSTALL/TIBSUN.MIX
+	CopyFilesFromCD: INSTALL/TIBSUN.MIX, SCORES.MIX, MULTI.MIX
+	PackageToExtractFromCD: INSTALL/TIBSUN.MIX:CRC32
+	ExtractFilesFromCD: cache.mix, conquer.mix, isosnow.mix, isotemp.mix, local.mix, sidec01.mix, sidec02.mix, sno.mix, snow.mix, sounds.mix, speech01.mix, tem.mix, temperat.mix
+	ShippedSoundtracks: 2
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+	ColorValidator
+
+LobbyDefaults:
+	AllowCheats: true
+	Crates: true
+	StartingUnitsClass: none
+	FragileAlliances: false
+	Shroud: true
+	Fog: true
+
+ChromeMetrics:
+	./mods/cd/metrics.yaml
+
+Fonts:
+	Regular:
+		Font:./mods/common/FreeSans.ttf
+		Size:14
+	Bold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:14
+	Title:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:32
+	BigBold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:24
+	MediumBold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:18
+	Small:
+		Font:./mods/common/FreeSans.ttf
+		Size:12
+	Tiny:
+		Font:./mods/common/FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font:./mods/common/FreeSansBold.ttf
+		Size:10
+
+SupportsMapsFrom: ts
+
+SpriteFormats: ShpTS, TmpTS, ShpTD
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERATE: .tem
+		SNOW: .sno
+	TilesetCodes:
+		TEMPERATE: t
+		SNOW: a

@@ -1,0 +1,134 @@
+TRUCKB:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Truck
+	Health:
+		HP: 2000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 5c0
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+
+ICBM:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Ballistic Missile Launcher
+	Health:
+		HP: 500
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		ROT: 5
+	RevealsShroud:
+		Range: 7c0
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	Transforms:
+		IntoActor: gaicbm
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds:
+		NoTransformSounds:
+
+BUS:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: School Bus
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 20
+		PipCount: 5
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+
+PICK:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Pickup
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 2
+		PipCount: 5
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+
+CAR:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Automobile
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 5
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+
+WINI:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Recreational Vehicle
+	Mobile:
+		ROT: 5
+		Speed: 113
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:

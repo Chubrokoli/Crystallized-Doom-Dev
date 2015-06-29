@@ -1,0 +1,301 @@
+NASOL:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 50
+	Tooltip:
+		Name: Rookie
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Rookie
+	Health:
+		HP: 100
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 80
+	Armament@PRIMARY:
+		Weapon: Minigun2
+		LocalOffset: 256,0,700
+		UpgradeTypes: eliteweapon
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	Armament@ELITE:
+		Weapon: M1Carbine
+		LocalOffset: 256,0,700
+		UpgradeTypes: eliteweapon
+		UpgradeMinEnabledLevel: 1
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+
+E3:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Rocketeer
+		Description: Anti-tank infantry.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Rocketeer
+	Health:
+		HP: 125
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 60
+	Armament@PRIMARY:
+		Weapon: Bazooka
+		LocalOffset: 280,84,1200
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+
+CHAMSPY:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Chameleon Spy
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Spy
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 10c0
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	Infiltrates:
+		Types: SpyInfiltrate
+	Cloak:
+		Types: Camoflage	
+		
+NENGINEER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Saboteur
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites:  ~nahand
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Saboteur
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 60
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-GainsExperience:		
+	Cloak:
+		Types: Camoflage 	
+
+NDOG:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Attack Dog
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Dog
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 6c0
+	Armament@primary:
+		Weapon: DogJaw
+	AttackLeap:
+		Speed: 120
+		Angle: 60
+	TargetableUnit:
+		TargetTypes: Ground, Infantry
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Range: 5
+		
+Fanatic:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand, ~!t1
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Fanatic
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Spy
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 90
+	RevealsShroud:
+		Range: 10c0
+	Armament@primary:
+		Weapon: Kamikaze
+	KillsSelf:
+		UpgradeTypes: kill
+		UpgradeMinEnabledLevel: 1
+	AttackFollow:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+
+NACAD:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Elite Cadre
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Rookie
+	Health:
+		HP: 260
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 70
+	Armament@PRIMARY:
+		Weapon: M1Carbine
+		LocalOffset: 256,0,700
+	Armament@secondary:
+		Weapon: M203
+		LocalOffset: 256,0,700
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+
+SHADOW:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Shadow Trooper
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Rookie
+	Health:
+		HP: 160
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 80
+	Armament@PRIMARY:
+		Weapon: WatchSniper
+		LocalOffset: 256,0,700
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	Cloak:
+		CloakTypes: Camoflage
+		UncloakOnMove: True
+		
+		

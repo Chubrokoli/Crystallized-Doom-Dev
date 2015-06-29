@@ -1,0 +1,264 @@
+KMCV:
+	Inherits: ^Vehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 110
+		Prerequisites: ~kaweap
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Cabal Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Selectable:
+		Priority: 3
+		Bounds: 42,42
+	Voiced:
+		VoiceSet: Cabalbeep
+	Health:
+		HP: 600
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		Crushes: wall, crate, infantry
+	RevealsShroud:
+		Range: 4c0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Transforms:
+		IntoActor: kacnst
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: facbld1.aud
+		NoTransformSounds:
+		Voice: Move
+	RenderSprites:
+	RenderVoxels:
+		NormalsPalette: RA2normals
+	WithVoxelBody:
+
+KHARV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Cabal Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~kaweap, kproc
+		InitialActivity: FindResources
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Voiced:
+		VoiceSet: Cabalbeep
+	Harvester:
+		Capacity: 20
+		Resources: Tiberium, BlueTiberium
+		UnloadTicksPerBale: 1
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+		HarvestVoice: Action
+		DeliverVoice: Move
+	Mobile:
+		Speed: 80
+		Crushes: wall, crate
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 100
+			Road: 100
+			Beach: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Water: 80
+	Health:
+		HP: 1400
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	-GainsExperience:
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelUnloadBody:
+	Hovers:
+		OffsetModifier: -50
+	Explodes:
+		Weapon: TiberiumExplosion
+	WithHarvestAnimation:
+		Offset: 384,0,0
+		Palette: effect	
+
+DREADFIRE:
+	Inherits: ^Tank
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Dreadfire
+		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 42, 60, 0, -25
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~kaweap, ~!t1
+	Mobile:
+		ROT: 5
+		Speed: 50
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: FireballLauncher
+		LocalOffset: 700,300,1800
+	Armament@secondary:
+		Weapon: FireballLauncher
+		LocalOffset: 700,-300,1800
+	RenderSprites:
+	WithInfantryBody:
+		AttackSequence: shoot
+	Voiced:
+		VoiceSet: Reaper
+
+REAPER:
+	Inherits: ^Tank
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Reaper
+		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 42,42, 0, -10
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~kaweap, ~!t1
+	Mobile:
+		ROT: 8
+		Speed: 130
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	AutoTarget:
+	Armament@primary:
+		Weapon: Dragon
+		LocalOffset: -50,0,2000
+	Armament@secondary:
+		Weapon: ReaperLaser
+		LocalOffset: -50,0,2000
+	Armament@web:
+		Weapon: WebLauncher
+		LocalOffset: -50,0,2000			
+	RenderSprites:
+	WithInfantryBody:
+	Voiced:
+		VoiceSet: Reaper
+	WithDeathAnimation:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 1
+			FireDeath: 1
+			EnergyDeath: 1
+
+SCAR:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Scarab
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~kaweap, ~!t1, ~!t2
+	Voiced:
+		VoiceSet: Husk
+	Mobile:
+		Speed: 90
+		ROT: 6
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 325
+	Armor:
+		Type: Medium
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+	Armament@PRIMARY:
+		Weapon: LaserFire2
+		LocalOffset: 800,0,512
+		Recoil: 200
+		RecoilRecovery: 10
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		NormalsPalette: RA2normals
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: no
+	WithVoxelBarrel:			
+			
+SICT:
+	Inherits: ^Tank
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Slicer
+	Selectable:
+		Bounds: 42,42, 0, -5
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~kaweap, ~!t1, ~!t2, ~!t3
+	Voiced:
+		VoiceSet: Husk
+	Mobile:
+		Speed: 60
+		ROT: 3
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 400
+	Armor:
+		Type: Medium
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 155mm
+		LocalOffset: 512,0,256
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolra2
+		Recoil: 200
+		RecoilRecovery: 10
+	AttackTurreted:
+	AutoTarget:
+	RenderSprites:
+	RenderVoxels:
+		NormalsPalette: RA2normals
+	WithVoxelBody:
+	WithVoxelTurret:
+		Recoils: no
+	WithVoxelBarrel:
+	WithMuzzleFlash:
+	

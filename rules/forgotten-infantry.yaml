@@ -1,0 +1,300 @@
+GRUNT:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~fabar
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Grunt
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Grunt
+	Health:
+		HP: 110
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 50
+	Armament@primary:
+		Weapon: SMG
+		LocalOffset: 185,50,500
+	Armament@secondary:
+		Weapon: SMG
+		LocalOffset: 185,-50,500
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		
+HUNTER:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~fabar
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: Hunter
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Hunter
+	Health:
+		HP: 120
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 50
+	Armament@primary:
+		Weapon: Vulcan
+		LocalOffset: 185,0,500
+	Armament@secondary:
+		Weapon: M203
+		LocalOffset: 185,0,500
+	AttackFrontal:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	
+FENGINEER:
+	Inherits: ^Mutant
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Mechanic
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites:  ~fabar
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Mechanic
+	Mobile:
+		Speed: 80
+	Health:
+		HP: 100
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	-GainsExperience:
+
+EXPLORER:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~fabar
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Explorer
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Explorer
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 10c0
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	Infiltrates:
+		Types: SpyInfiltrate
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Types: Camoflage
+	
+FDOG:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~fabar
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hellhound
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: MutantDog
+	Health:
+		HP: 150
+	Mobile:
+		Speed: 80
+	RevealsShroud:
+		Range: 6c0
+	Armament@primary:
+		Weapon: MutantDogJaw
+	AttackLeap:
+		Speed: 130
+		Angle: 60
+	TargetableUnit:
+		TargetTypes: Ground, Infantry
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Range: 5
+		
+MHIJACK:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~fabar, ~!t1
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mutant Hijacker
+		Description: Hijacks enemy vehicles.\n  Unarmed
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Thief
+	Health:
+		HP: 300
+	Mobile:
+		Speed: 99
+	Captures:
+		CaptureTypes: Vehicle
+	RevealsShroud:
+		Range: 6c0
+	-AutoTarget:
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+
+BRIGAND:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~fabar
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Brigand
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Bounds: 12,17,0,-9
+	Voiced:
+		VoiceSet: Grunt
+	Health:
+		HP: 250
+	Armor:
+		Type: Kevlar
+	Mobile:
+		Speed: 50
+	Armament@primary:
+		Weapon: BrigandShotgun
+		LocalOffset: 185,50,800
+	Armament@secondary:
+		Weapon: BrigandShotgun2
+		LocalOffset: 185,50,800
+	Armament@secondary2:
+		Weapon: BrigandShotgun2
+		LocalOffset: 185,50,800
+	Armament@secondary3:
+		Weapon: BrigandShotgun2
+		LocalOffset: 185,50,800
+	Armament@secondary4:
+		Weapon: BrigandShotgun2
+		LocalOffset: 185,50,800
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2		
+		
+GHOST:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Ghost Stalker
+		Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 50
+		Prerequisites: ~fabar, ~!t1, ~!t2, ~!t3
+		BuildLimit: 1
+	Selectable:
+		Bounds: 12,17,0,-6
+	Voiced:
+		VoiceSet: Ghost
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 200
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Passenger:
+	RevealsShroud:
+		Range: 6c0
+	Armament:
+		Weapon: LtRail
+		LocalOffset: 85,0,384
+	Crushable:
+		CrushSound: squishy2.aud
+	AttackFrontal:
+	C4Demolition:
+		C4Delay: 45
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+			Prone60Percent: 60
+			Prone70Percent: 70
+			Prone100Percent: 100
+			Prone350Percent: 350
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		

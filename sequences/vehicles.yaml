@@ -1,0 +1,212 @@
+gmcv:
+	icon: gmcvicon
+	
+nmcv:
+	icon: nmcvicon
+
+kmcv:
+	icon: kmcvicon
+
+fmcv:
+	icon: fmcvicon
+	
+apc:
+	icon: apcicon
+
+gtmtnk:
+	muzzle: apmuzzle
+		Length: *
+#		BlendMode: Additive #Multiply, Alpha, Additive
+	icon: archonicon	
+
+cheetah:
+	muzzle: apmuzzle
+		Length: *
+#		BlendMode: Additive #Multiply, Alpha, Additive
+	icon: cheetahicon
+	
+fltnk:
+	icon: fltnkicon	
+
+fmtnk:
+	muzzle: apmuzzle
+		Length: *
+	icon: fmtnkicon	
+
+sict:
+	muzzle: apmuzzle
+		Length: *
+	icon: fmtnkicon	
+	
+wapc:
+	muzzle: gunfire
+		Length: *
+	icon: wapcicon
+	
+gharv:
+	icon: gharvicon
+	harvest: harvestr
+		Length: *
+
+nharv:
+	icon: nharvicon
+	harvest: harvestr
+		Length: *
+
+kharv:
+	icon: kharvicon
+	harvest: harvestr
+		Length: *
+
+fharv:
+	icon: fharvicon
+	harvest: harvestr
+		Length: *
+		
+hvr:
+	icon: hovricon
+
+4tnk:
+	muzzle: gunfire
+		Length: *
+	icon: archonicon
+
+scar:
+	icon: scaricon	
+	
+lpst:
+	icon: lpsticon
+
+repair:
+	icon: rboticon
+
+art2:
+	icon: artyicon
+
+weed:
+	icon: weedicon
+
+hmec:
+	icon: hmecicon
+
+bike:
+	icon: cyclicon
+
+bggy:
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	icon: bggyicon
+
+fbuggy:
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	icon: fbuggyicon	
+	
+sapc:
+	icon: sapcicon
+
+subtank:
+	icon: subticon
+
+sonic:
+	icon: soniicon
+
+ttnk:
+	muzzle: gunfire
+		Length: *
+	icon: tickicon
+
+stnk:
+	icon: stnkicon
+
+mmch:
+	stand:
+		Facings: -8
+		Stride: 22
+		ShadowStart: 208
+	run:
+		Length: 22
+		Facings: -8
+		ShadowStart: 208
+	turret:
+		Start: 176
+		Facings: -32
+		ShadowStart: 384
+	muzzle: apmuzzle
+		Length: *
+	icon: mmchicon
+
+gghunt:
+	idle:
+		Facings: 1
+		Length: 8
+		ShadowStart: 8
+	
+smech:
+	stand:
+		Start: 168
+		Facings: -8 
+		ShadowStart: 344
+		Tick: 50
+	run:
+		Facings: -8
+		Length: 14
+		ShadowStart: 176
+		Tick: 70
+	shoot:
+		Start: 112
+		Length: 7
+		Facings: -8
+		ShadowStart: 288
+		Tick: 100
+	icon: smechicon
+	
+dreadfire:
+	stand:
+		Facings: -8 
+		ShadowStart: 224
+	run:
+		Start: 8
+		Facings: -8
+		Length: 12
+		ShadowStart: 232
+		Tick: 90
+	shoot:
+		Start: 104
+		Length: 15
+		Facings: -8
+		ShadowStart: 328
+		Tick: 100
+	icon: dreadfireicon
+	
+reaper:
+	stand:
+		Facings: 8 
+		ShadowStart: 117
+	run:
+		Start: 8
+		Facings: 8
+		Length: 12
+		ShadowStart: 125
+		Tick: 20
+	die1:
+		Start: 104
+		Length: 13
+		ShadowStart: 221
+	icon: reapicon

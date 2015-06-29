@@ -1,0 +1,100 @@
+FAWALL:
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 20
+		Prerequisites: ~structures.forgotten
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+	Health:
+		HP: 300
+	Armor:
+		Type: Concrete
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+
+FASPOT:
+	Inherits: ^Building
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 30
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Forgotten Watch Tower
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Selectable:
+		Bounds: 48, 82, 0, -25
+	Power:
+		Amount: -10
+	Armor:
+		Type: Steel
+	Health:
+		HP: 400
+	-GivesBuildableArea:
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: WatchSniper
+		LocalOffset: 0,0,2100
+	AttackOmni:
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Range: 5
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	ProvidesPrerequisite@buildingname:	
+
+FATOWER:
+	Inherits: ^Building
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 30
+		Prerequisites: fabar, ~structures.forgotten, ~!t1
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Forgotten Watch Tower
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Selectable:
+		Bounds: 48, 82, 0, -25
+	Power:
+		Amount: -10
+	Armor:
+		Type: Steel
+	Health:
+		HP: 400
+	-GivesBuildableArea:
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: WatchSniper
+		LocalOffset: 0,0,1000
+	AttackOmni:
+	AutoTarget:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		CloakTypes: Camoflage
+		Range: 5
+	WithIdleOverlay@flag:
+		Sequence: idle-flag
+	ProvidesPrerequisite@buildingname:		

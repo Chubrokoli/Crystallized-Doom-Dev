@@ -1,0 +1,49 @@
+LPST:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 950
+	Tooltip:
+		Name: Mobile Sensor Array
+		Description: Can detect cloaked and subterranean\nunits when deployed.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Prerequisites: ~disabled
+	Health:
+		HP: 600
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		ROT: 5
+	RevealsShroud:
+		Range: 10c0
+	RenderSprites:
+	RenderVoxels:
+	WithVoxelBody:
+	Transforms:
+		IntoActor: gadpsa
+		Facing: 159
+		TransformSounds:
+		NoTransformSounds:
+
+GGHUNT:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Hunter-Seeker Droid
+	Mobile:
+		ROT: 16
+		Speed: 355
+	Health:
+		HP: 500
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	RenderUnit:
+	DemoTruck:
+	Explodes:
+		Weapon: SuicideBomb
+		EmptyWeapon: SuicideBomb

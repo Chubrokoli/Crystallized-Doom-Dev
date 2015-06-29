@@ -1,0 +1,310 @@
+KACNST:
+	Inherits: ^Building
+	Building:
+		Footprint: xxx xxx xxx
+		BuildSounds: facbld1.aud
+		Dimensions: 3,3
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+	Health:
+		HP: 1500
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 10c0
+	Production:
+		Produces: Building,Defense
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Cabal Construction Yard
+		Description: Builds base structures.
+	CustomSellValue:
+		Value: 2500
+	BaseBuilding:
+	Transforms:
+		IntoActor: kmcv
+		Offset: 1,1
+		Facing: 96
+	ProductionBar@Building:
+		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
+	WithIdleOverlay@cabal:
+		Sequence: idle-cabal
+	WithIdleOverlay@lights:
+		Sequence: idle-lights
+	WithIdleOverlay@player:
+		Sequence: idle-player
+#	WithBuildingPlacedOverlay:
+	Power:
+		Amount: 0
+	Selectable:
+		Bounds: 144, 80, 0, -12
+	ProvidesPrerequisite@cabal:
+		Prerequisite: structures.cabal
+
+KPR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 0
+		Prerequisites: ~structures.cabal
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Cabal Power Core
+		Description: Provides power for other structures.
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	InfiltrateForPowerOutage:
+		Duration: 750
+	AffectedByPowerOutage:
+	Selectable:
+		Bounds: 88, 80, 2, -12
+	Health:
+		HP: 600
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithIdleOverlay@LIGHTS2:
+		Sequence: idle-lights2
+	Power:
+		Amount: 400
+	TargetableBuilding:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:	
+
+KPROC:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Cabal Tiberium Refinery
+		Description: Processes raw Tiberium\ninto useable resources.
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 20
+		Prerequisites: anypower, ~structures.cabal
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: 500
+	Selectable:
+		Bounds: 134, 122, 0, -18
+	Health:
+		HP: 900
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 2,1
+	StoresResources:
+		PipColor: Green
+		PipCount: 30
+		Capacity: 30000
+	CustomSellValue:
+		Value: 600
+	FreeActor:
+		Actor: KHARV
+		InitialActivity: FindResources
+		SpawnOffset: 3,1
+		Facing: 160
+	WithIdleOverlay@REDLIGHTS:
+		Sequence: idle-redlights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	WithDockingOverlay@flame:
+		Sequence: flame
+		Palette: effect
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:	
+
+KASILO:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 70
+		Prerequisites: kproc, ~structures.cabal
+	Valued:
+		Cost: 150
+	Tooltip:
+		Name: Cabal Silo
+		Description: Stores excess Tiberium.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	InfiltrateForCash:
+		Percentage: 50
+		Minimum: 500
+	Selectable:
+		Bounds: 80, 48, -5, 0
+	-GivesBuildableArea:
+	Health:
+		HP: 300
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	-RenderBuilding:
+	RenderBuildingSilo:
+	WithIdleOverlay@UNDERLAY:
+		Sequence: idle-underlay
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	StoresResources:
+		PipCount: 10
+		Capacity: 10000
+	Power:
+		Amount: -10	
+	
+CYBBAR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 30
+		Prerequisites: anypower, ~structures.cabal
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Cyborg Production Plant
+		Description: Produces infantry.
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 116, 78, 3, -8
+	Health:
+		HP: 800
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: -1300,300,0
+		ExitCell: 2,3
+	RallyPoint:
+		RallyPoint: 3,3
+	Production:
+		Produces: Infantry
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@LIGHTS2:
+		Sequence: idle-lights2
+	Power:
+		Amount: -60
+	ProvidesPrerequisite@buildingname:	
+	
+KAWEAP:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Cabal War Factory
+		Description: Produces vehicles.
+	ProvidesPrerequisite:
+		Prerequisite: factory
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 50
+		Prerequisites: kproc, ~structures.cabal, ~!t1
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 149, 116, -3, -20
+	Health:
+		HP: 1000
+	Armor:
+		Type: Steel
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		RallyPoint: 6,1
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 4,1
+		ExitDelay: 5
+	Production:
+		Produces: Vehicle
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithIdleOverlay@fan:
+		Sequence: idle-fan
+	WithProductionOverlay@lights2:
+		Sequence: production-lights2
+	WithProductionDoorOverlay@DOOR:
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	
+KARADR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 90
+		Prerequisites: kproc, ~structures.cabal, ~!t1, ~!t2
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Cabal Radar
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 82, 0, -17
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 10c0
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		PauseOnLowPower: yes
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+		PauseOnLowPower: yes
+	TargetableBuilding:
+		TargetTypes: Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	
